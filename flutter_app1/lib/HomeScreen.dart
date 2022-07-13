@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_final_fields
+// ignore_for_file: prefer_const_constructors, prefer_final_fields, unused_import, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app1/Calculator.dart';
@@ -18,9 +18,9 @@ class _HomeScreenState extends State<HomeScreen> {
   var _pages = [
     HomePage(),
     Calculator(),
-    ServicePage(),
+    ProfilePage(),
     AboutPage(),
-    ServicePage(),
+    ProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -29,8 +29,12 @@ class _HomeScreenState extends State<HomeScreen> {
             drawer: MainDrawer(),
             extendBodyBehindAppBar: true,
             appBar: AppBar(
-              title: Text("HealthyApp"),
-              backgroundColor: Colors.black.withOpacity(0.1),
+              title: Text(
+                "HealthyApp",
+                style: TextStyle(color: Color.fromARGB(255, 41, 4, 248)),
+              ),
+              backgroundColor:
+                  Color.fromARGB(255, 145, 188, 249).withOpacity(0.5),
               elevation: 0,
             ),
             body: Center(
@@ -51,7 +55,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 //     icon: Icon(Icons.design_services), label: "Services"),
               ],
               type: BottomNavigationBarType.fixed,
-              backgroundColor: Colors.transparent.withOpacity(0.1),
+              backgroundColor:
+                  Color.fromARGB(255, 145, 188, 249).withOpacity(0.5),
               elevation: 0,
               unselectedItemColor: Colors.grey,
               fixedColor: Colors.black,

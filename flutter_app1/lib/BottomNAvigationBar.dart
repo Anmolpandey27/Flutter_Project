@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, unused_field, prefer_final_fields
+
 import 'package:flutter/material.dart';
 import 'BottomSamplePages.dart';
 
@@ -13,9 +15,9 @@ class _BottomBarState extends State<BottomBar> {
   var _pages = [
     HomePage(),
     AboutPage(),
-    ServicePage(),
+    ProfilePage(),
     AboutPage(),
-    ServicePage(),
+    ProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class _BottomBarState extends State<BottomBar> {
         //     icon: Icon(Icons.design_services), label: "Services"),
       ],
       type: BottomNavigationBarType.fixed,
-      backgroundColor: Colors.black.withOpacity(0.1),
+      backgroundColor: Color.fromARGB(255, 160, 90, 90).withOpacity(1),
       elevation: 0,
       unselectedItemColor: Colors.grey,
       fixedColor: Colors.black,
